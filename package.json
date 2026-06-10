@@ -1,0 +1,34 @@
+{
+  "name": "opencode-tsindex-guidance",
+  "version": "0.1.0",
+  "description": "An opencode plugin that nudges agents toward tsindex MCP code navigation and warns on costly full-file reads.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "pack:dry-run": "npm pack --dry-run"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tsindex",
+    "code-navigation",
+    "mcp"
+  ],
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.17.3",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
