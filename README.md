@@ -15,9 +15,9 @@ When a workspace has tsindex MCP tools available, agents can navigate code more 
 The plugin registers two hooks:
 
 - `experimental.chat.system.transform` appends concise tsindex navigation guidance to the chat system prompt once per session.
-- `tool.execute.before` prepends the same guidance to subagent `task` prompts and writes a stderr hint when an agent attempts a full-file `read` on a tsindex-supported file type.
+- `tool.execute.before` prepends the same guidance to subagent `task` prompts, writes a stderr hint when an agent attempts a full-file `read` on a tsindex-supported file type, and writes a stderr hint when an agent runs `edit` on one — surfacing `replace_symbol` for whole-symbol rewrites.
 
-The read hint is advisory only. It does not block or rewrite the tool call.
+The read and edit hints are advisory only. They do not block or rewrite the tool call.
 
 ## Installation
 
