@@ -94,6 +94,20 @@ const plugin: Plugin = async ({ directory }) => {
         return
       }
 
+      if (input.tool === "edit") {
+        const args = output.args as Record<string, unknown>
+        if (args == null || Array.isArray(args)) return
+
+        const filePath = args.filePath
+        if (!supportsTsindex(filePath)) return
+
+        const repo = getRepoName(dirname(filePath))
+        process.stderr.write(
+          `[tsindex-guidance] Edit for ${filePath}. If this rewrites a WHOLE function/class/type, mcp__tsindex__replace_symbol (repo=\"${repo}\") edits it by name with no prior Read — your call; built-in edit is right for partial/line-level or non-symbol changes.\n`,
+        )
+        return
+      }
+
       if (input.tool !== "read") return
 
       const args = output.args as Record<string, unknown>
