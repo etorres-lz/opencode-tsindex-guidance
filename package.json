@@ -1,6 +1,6 @@
 {
   "name": "opencode-tsindex-guidance",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An opencode plugin that nudges agents toward tsindex MCP code navigation and warns on costly full-file reads.",
   "license": "MIT",
   "type": "module",
