@@ -35,7 +35,7 @@ Then restart opencode so the plugin is loaded.
 
 ## Supported file types
 
-The full-file read hint applies to common source and documentation files, including TypeScript, JavaScript, Python, Rust, Go, Java, Kotlin, C/C++, CSS, shell scripts, JSON, YAML, and Markdown.
+The full-file read hint applies to common source and documentation files, including TypeScript, JavaScript, Python, Rust, Go, Java, Kotlin, C#, C/C++, Ruby, PHP, HTML, CSS, shell scripts, JSON, YAML, and Markdown.
 
 ## Development
 
